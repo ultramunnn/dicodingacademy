@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+:root {
+  --primary-color: #000000; /* Warna biru */
+  --secondary-color: #3d0000; /* Warna hijau */
+  --text-color: #ff0000; /* Warna teks */
+  --background-color: #950101; /* Warna latar belakang */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0px;
+}
+
+
+header.navbar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--background-color);
+  
+}
+
+header.navbar-container img {
+  margin: 10px;
+  border-radius: 20px;
+  width: 120px;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+  color: #ff0000;
+}
+
+nav ul li {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+nav ul li:hover {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.m-text{
+  font-size: 40px;
+}
+
+.container {
+    display: flex; /* Menggunakan flexbox untuk menampilkan main dan aside */
+    flex: 1; /* Mengambil sisa ruang dari body */
+  }
+
+main {
+  flex: 3;
+  margin: 10px;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  flex-direction: column;
+  
+}
+
+.sejarah h1 {
+  color: var(--text-color);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.judul-pemain {
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pemain-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.pemain-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 220px;
+  background-color: var(--text-color);
+  border-radius: 0 20px;
+}
+
+.poto img {
+  width: 100px;
+}
+
+.namapemain {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: white;
+}
+.table-pemain {
+  background-color: var(--background-color);
+    color: white;
+  font-size: 10px;
+  width: 100%;
+  border-radius: 0 20px;
+
+}
+
+.table-pemain td {
+  padding: 5px;
+  text-align: left;
+}
+
+aside {
+    flex: 2;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 40px;
+
+}
+
+
+aside.container-thropy{
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  text-align: center;
+}
+
+.container-thropy h2{
+  text-align: center;
+
+}
+
+
+
+.thropy{
+  text-align: center;
+  align-items: center;
+ 
+
+}
+
+footer {
+  width: 100%;
+  height: 50px; /* Sesuaikan tinggi footer */
+  background-color: var(--background-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Mengatur layout header untuk mobile */
+  header.navbar-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    
+  }
+
+  header.navbar-container img {
+    margin-left: 30px;
+    width: 80px; /* Mengurangi ukuran logo */
+  }
+
+  header.navbar-container img:hover {
+    background: rgb(255, 216, 216);
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul li {
+    font-size: 16px;
+    padding: 10px;
+    
+  }
+
+  /* Menyesuaikan layout container utama untuk mobile */
+  .container {
+    flex-direction: column;
+  }
+
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+
+  /* Menyesuaikan tampilan artikel untuk mobile */
+  article {
+    margin: 10px 0;
+  }
+
+  /* Menyesuaikan layout pemain-list pada tampilan mobile */
+  .pemain-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .pemain-item {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Mengurangi ukuran gambar pemain untuk mobile */
+  .poto img {
+    width: 80px;
+  }
+
+  .table-pemain {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  /* Mengatur aside dan thropy untuk menyesuaikan pada layar kecil */
+  aside {
+    flex-direction: column;
+    padding: 20px 10px;
+    height: auto; /* Menghapus tinggi tetap */
+  }
+
+  aside .container-thropy {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .thropy {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Ukuran font dan spacing umum untuk elemen teks */
+  .judul-pemain, .sejarah h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
